@@ -1,10 +1,13 @@
 package main;
 
 public class Calculator {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	
+	public static int add(String text) {
+		if(text.isEmpty()) {
+			return 0;
+		}
+		
+		return -1;
 	}
 
 }
