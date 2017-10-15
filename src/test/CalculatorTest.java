@@ -19,7 +19,7 @@ public class CalculatorTest {
 	}
 	
 	@Test
-	public void testtwoNumber() {
+	public void testTwoNumber() {
 		assertEquals(3, Calculator.add("1,2"));
 	}
 	
@@ -40,4 +40,9 @@ public class CalculatorTest {
 		assertEquals(sum, Calculator.add(text));
 	}
 
+	@Test
+	public void testNewLineDelimitter() {
+		assertEquals(3, Calculator.add("1\n2"));
+	}
+	
 }

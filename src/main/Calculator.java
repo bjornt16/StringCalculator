@@ -11,7 +11,7 @@ public class Calculator {
 		if(text.isEmpty()) {
 			return 0;
 		} else {
-			String[] textNumbers = text.split(",");
+			String[] textNumbers = text.split("\n|,");
 			numbers = new int[textNumbers.length];
 			for(int i = 0; i < textNumbers.length; i++){
 				numbers[i] = Integer.parseInt(textNumbers[i]);
