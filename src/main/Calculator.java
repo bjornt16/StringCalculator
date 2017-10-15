@@ -10,10 +10,18 @@ public class Calculator {
 		int sum = 0;
 		int temp = 0;
 		String neg = "";
+		String del = "";
 		if(text.isEmpty()) {
 			return 0;
 		} else {
-			String[] textNumbers = text.split("\n|,");
+			if(text.length() > 1 && text.substring(0, 2).equals("//")) {
+				del = "|" + text.substring(2, text.indexOf("\n"));
+				text = text.substring(text.indexOf("\n")+1, text.length());
+			}
+			
+			System.out.println(text);
+			
+			String[] textNumbers = text.split("\n|,"+del);
 			numbers = new int[textNumbers.length];
 			for(int i = 0; i < textNumbers.length; i++){
 				temp = Integer.parseInt(textNumbers[i]);
